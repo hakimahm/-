@@ -1,0 +1,779 @@
+/* Reset Styles */
+html {
+    scroll-behavior: smooth;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.1); /* خلفية بيضاء */
+    color: whitesmoke; /* نص أسود */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    height: 70px; /* حجم اللوجو */
+    width: auto;
+    background: transparent; /* الخلفية شفافة */
+}
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    flex: 1;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    display: block;
+    text-align: center;
+  }
+  
+  .nav-links a:hover {
+    color: #b2b5b8;
+  }
+  
+  /* View Button */
+  .view-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 20px;
+  }
+  
+  .view-btn:hover {
+    background-color: #495057;
+    transform: scale(1.05);
+  }
+  
+  /* Hamburger Menu */
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: whitesmoke;
+    transition: transform 0.3s ease;
+  }
+  /* Hero Section Styles */
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('images/pyr.jpg'); /* يمكن وضع صورة أو فيديو هنا */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* شفافية خلفية محتوى */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .hero h1 {
+    color: rgb(124, 92, 11);
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .explore-btn {
+    background-color: #6c757d; /* زر بلون رصاصي */
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .explore-btn:hover {
+    background-color: #495057; /* لون أغمق عند التمرير */
+  }
+  
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar{
+        background-color:  rgba(0, 0, 0, 0.1);
+    }
+    .nav-links {
+      display: none; /* إخفاء الروابط */
+      background-color:  rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+      display: flex; /* عرض القائمة عند الضغط */
+    }
+  
+    .hamburger-menu {
+      display: flex; /* عرض الـ Hamburger Menu عند الموبايل */
+    }
+  
+    .view-btn {
+        display: none; /* إخفاء الزر في الموبايل */
+      }
+      .hero {
+        height: 100vh; /* تغيير الارتفاع ليكون تلقائي حسب المحتوى */
+        background-image: url('images/res-wallpaper.jpg'); /* تغيير الصورة للخلفية للموبايل */
+        background-position: center; /* تحديد الصورة ليتم محاذاتها إلى الأعلى */
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+    
+      /* تغيير حجم الخط والنصوص */
+      .hero h1 {
+        font-size: 30px; /* تصغير حجم الخط في الموبايل */
+      }
+    
+      .hero p {
+        font-size: 16px; /* تصغير النصوص */
+        margin-bottom: 10px;
+      }
+    
+      .explore-btn {
+        padding: 10px 25px; /* تقليص الزر */
+        font-size: 16px; /* تقليص النص في الزر */
+      }
+    
+      .hero-content {
+        padding: 15px; /* تقليل المسافات الداخلية */
+        width: 90%; /* تقليص العرض */
+      }
+  }
+  
+  /* Sections Intro */
+.sections-intro {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .sections-intro .container {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .sections-intro h2 {
+    font-size: 36px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  .sections-intro p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .sections-intro h2 {
+      font-size: 28px;
+    }
+  
+    .sections-intro p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sections-intro h2 {
+      font-size: 24px;
+    }
+  
+    .sections-intro p {
+      font-size: 14px;
+    }
+  }
+  
+
+
+/* Pyramids Section */
+.pyramids-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    justify-content: center;
+    display: block;
+  }
+  
+  .pyramids-section .container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    display: block;
+  }
+  
+  /* العنوان */
+  .section-title {
+    font-size: 36px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.8s ease-out;
+  }
+  
+  /* الوصف */
+/* تنسيق النصوص */
+.content-section {
+    margin: 20px;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+  }
+  
+  .arabic-text {
+    direction: rtl; /* النص من اليمين إلى اليسار */
+    text-align: right; /* محاذاة النص لليمين */
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .english-text {
+    direction: ltr; /* النص من اليسار إلى اليمين */
+    text-align: left; /* محاذاة النص لليسار */
+    font-size: 22px;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  
+  /* الصور */
+  .pyramids-images {
+    display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  }
+  
+  .pyramid-img {
+    width: calc(33.333% - 20px);
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .pyramid-img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* الخريطة */
+  .map h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .map iframe {
+    border: none;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.8s ease-out 0.6s;
+  }
+  
+  /* التأثيرات عند التمرير */
+  .pyramids-section.show .section-title,
+  .pyramids-section.show .section-description,
+  .pyramids-section.show .pyramids-images,
+  .pyramids-section.show .map iframe {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .pyramids-section .container{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .pyramid-img {
+      width: calc(50% - 10px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pyramid-img {
+      width: 100%;
+    }
+  }
+
+  /* Section Styling */
+.karnak-section {
+  padding: 50px 20px;
+  background: #f7f7f7;
+  text-align: center;
+  overflow: hidden;
+}
+
+.karnak-section .section-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+  position: relative;
+  animation: glow 1.5s infinite alternate;
+}
+.map-container {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+iframe {
+  border: none;
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+}
+
+/* Glow Effect for Title */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff9800, 0 0 20px #ff9800, 0 0 30px #ff9800;
+  }
+  to {
+    text-shadow: 0 0 20px #ffc107, 0 0 40px #ffc107, 0 0 50px #ffc107;
+  }
+}
+
+/* Description Styling */
+.karnak-section .description {
+  margin: 10px auto;
+  max-width: 800px;
+  color: #555;
+  text-align: justify;
+}
+
+.karnak-section .arabic {
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.karnak-section .english {
+  direction: ltr;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Images Styling */
+.karnak-section .images {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.karnak-section .images img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.karnak-section .images img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .karnak-section .images img {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .karnak-section .description {
+    text-align: center;
+  }
+}
+
+/* سكشن البحر الاحمر  */
+.section_red_sea {
+  padding: 40px 20px;
+}
+
+.text-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.text-container h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000ee;
+}
+
+.text-container p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* ستايل الصور مع الترانزيشن */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image-gallery img {
+  width: 250px;
+  height: 150px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* خريطة البحر الأحمر */
+.map-container {
+  margin-top: 30px;
+}
+
+
+
+.video_section {
+  max-width: 800px; /* يحدد الحد الأقصى لعرض الفيديو */
+  margin: 50px auto; /* يضيف مسافة من الأعلى والأسفل + يجعل الفيديو في المنتصف */
+  padding: 10px; /* يضيف مسافة بين الفيديو وحدود الشاشة */
+  background: #000; /* لون خلفية لإبراز الفيديو */
+  border-radius: 10px; /* يجعل الزوايا مستديرة */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ظل خفيف لإبراز الفيديو */
+}
+
+.video_section iframe {
+  width: 100%; /* يجعل الفيديو متجاوبًا مع الحجم المتاح */
+  height: 450px; /* ارتفاع ثابت للفيديو */
+  border-radius: 8px; /* يجعل زوايا الفيديو مستديرة */
+}
+
+
+/* سكشن الفيوم */
+
+.section_fayoum {
+  padding: 40px 20px;
+}
+
+.text-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.text-container h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000ee;
+}
+
+.text-container p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* ستايل الصور مع الترانزيشن */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image-gallery img {
+  width: 250px;
+  height: 150px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* خريطة وادي الريان */
+.map-container {
+  margin-top: 30px;
+}
+
+
+
+/* سكشن شارع المعز  */
+.section_mo3ez {
+  padding: 40px 20px;
+}
+
+.text-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.text-container h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000ee;
+}
+
+.text-container p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* ستايل الصور مع الترانزيشن */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image-gallery img {
+  width: 250px;
+  height: 150px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1);
+}
+
+
+/* خريطه شارع المعز  */
+.map-container {
+  margin-top: 30px;
+}
+
+.section_kal3a {
+  padding: 40px 20px;
+}
+
+.text-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.text-container h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000ee;
+}
+
+.text-container p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* ستايل الصور مع الترانزيشن */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image-gallery img {
+  width: 250px;
+  height: 150px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* خريطه قلعه محمد علي  */
+.map-container {
+  margin-top: 30px;
+}
+
+/*  تصميم عام للسيكشن التواصل*/
+/* /* تصميم عام للسيكشن  */
+.contact-section {
+  width:100%;
+  background: #333; /* لون رمادي غامق */
+  padding: 50px 20px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 6px;
+}
+
+/* تصغير عرض الكونتينر */
+.contact-section .container {
+  max-width: 400px; /* تقليل العرض */
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* عنوان السيكشن */
+.section-title {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* تصميم الفورم */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* حقول الإدخال */
+.contact-form input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: white;
+  color: #333;
+  text-align: center;
+}
+
+.contact-form input::placeholder {
+  color: #666;
+}
+
+/* زر الإرسال */
+.contact-form button {
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: #ff9800;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #e68900;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 480px) {
+  .contact-section .container {
+      max-width: 90%;
+  }
+}
+
+/* تصميم الفوتر */
+.footer {
+  background: white ; /* خلفية رمادية غامقة */
+  color: #333; /* لون النص */
+  text-align: center;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.6;
+}
