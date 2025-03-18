@@ -100,7 +100,7 @@ html {
 .hero {
     position: relative;
     height: 100vh;
-    background-image: url('images/pyr.jpg'); /* يمكن وضع صورة أو فيديو هنا */
+    background-image: url('pyr.jpg'); /* يمكن وضع صورة أو فيديو هنا */
     background-size: cover;
     background-position: center;
     color: white;
@@ -174,7 +174,7 @@ html {
       }
       .hero {
         height: 100vh; /* تغيير الارتفاع ليكون تلقائي حسب المحتوى */
-        background-image: url('images/res-wallpaper.jpg'); /* تغيير الصورة للخلفية للموبايل */
+        background-image: url('res-wallpaper.jpg'); /* تغيير الصورة للخلفية للموبايل */
         background-position: center; /* تحديد الصورة ليتم محاذاتها إلى الأعلى */
         align-items: center;
         justify-content: center;
